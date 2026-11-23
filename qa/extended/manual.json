@@ -1,0 +1,250 @@
+[
+  {
+    "question": "What is the first item of release?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "first item"
+    ],
+    "relevant": [
+      "25.0/major"
+    ]
+  },
+  {
+    "question": "What does minor return if unavailable?",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "second item"
+    ],
+    "relevant": [
+      "26.3/minor"
+    ]
+  },
+  {
+    "question": "Explain micro",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "third item"
+    ],
+    "relevant": [
+      "25.0/micro"
+    ]
+  },
+  {
+    "question": "Show the epoch example for Version(\"2.0.0\")",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      ".epoch\n0"
+    ],
+    "relevant": [
+      "26.3/epoch"
+    ]
+  },
+  {
+    "question": "What is the local version segment?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "local version segment"
+    ],
+    "relevant": [
+      "25.0/local"
+    ]
+  },
+  {
+    "question": "Which release keyword argument is required for from_parts?",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "keyword argument is required"
+    ],
+    "relevant": [
+      "26.3/from_parts"
+    ]
+  },
+  {
+    "question": "Show Version.from_parts syntax",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [],
+    "relevant": []
+  },
+  {
+    "question": "What does public return?",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "public portion"
+    ],
+    "relevant": [
+      "26.3/public"
+    ]
+  },
+  {
+    "question": "What is the development number?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "development number"
+    ],
+    "relevant": [
+      "25.0/dev"
+    ]
+  },
+  {
+    "question": "Show post-release number",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "post-release number"
+    ],
+    "relevant": [
+      "26.3/post"
+    ]
+  },
+  {
+    "question": "Is a dev release considered a prerelease?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      ".is_prerelease\nTrue"
+    ],
+    "relevant": [
+      "25.0/is_prerelease"
+    ]
+  },
+  {
+    "question": "How does base_version handle pre and post markers?",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "without any pre or post"
+    ],
+    "relevant": [
+      "26.3/base_version"
+    ]
+  },
+  {
+    "question": "What are the release components?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "components"
+    ],
+    "relevant": [
+      "25.0/release"
+    ]
+  },
+  {
+    "question": "Show is_devrelease for 1.2.3.dev1",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      ".is_devrelease\nTrue"
+    ],
+    "relevant": [
+      "26.3/is_devrelease"
+    ]
+  },
+  {
+    "question": "Explain the pre-release segment",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "pre-release segment"
+    ],
+    "relevant": [
+      "25.0/pre"
+    ]
+  },
+  {
+    "question": "Explain is_postrelease",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "post-release"
+    ],
+    "relevant": [
+      "26.3/is_postrelease"
+    ]
+  },
+  {
+    "question": "Which keyword does from_parts require?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [],
+    "relevant": []
+  },
+  {
+    "question": "Can I build a version without running a regular expression?",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "without going though a string"
+    ],
+    "relevant": [
+      "26.3/from_parts"
+    ]
+  },
+  {
+    "question": "Show the public property performance advice for __replace__",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [],
+    "relevant": []
+  },
+  {
+    "question": "Show the public portion performance advice",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "__replace__(local=None)"
+    ],
+    "relevant": [
+      "26.3/public"
+    ]
+  }
+]

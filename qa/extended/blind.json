@@ -1,0 +1,300 @@
+[
+  {
+    "question": "An Atlas 1.0 request has gone quiet. How long does it wait before giving up?",
+    "versions": [
+      "1.0"
+    ],
+    "relevant": [
+      "1.0/timeout"
+    ],
+    "expected": [
+      "10 seconds"
+    ],
+    "kind": "paraphrase"
+  },
+  {
+    "question": "With Atlas 2.0, how many extra tries do I get after the initial request fails?",
+    "versions": [
+      "2.0"
+    ],
+    "relevant": [
+      "2.0/retries"
+    ],
+    "expected": [
+      "4 retries"
+    ],
+    "kind": "paraphrase"
+  },
+  {
+    "question": "Our 1.0 startup code has a URL ready. What call gives us a client?",
+    "versions": [
+      "1.0"
+    ],
+    "relevant": [
+      "1.0/connect"
+    ],
+    "expected": [
+      "Atlas.connect(url)"
+    ],
+    "kind": "paraphrase"
+  },
+  {
+    "question": "What's the upper bound on the number of items in a single page in 2.0?",
+    "versions": [
+      "2.0"
+    ],
+    "relevant": [
+      "2.0/pagination"
+    ],
+    "expected": [
+      "100 items"
+    ],
+    "kind": "supported"
+  },
+  {
+    "question": "What's the cache expirty time on 1.0?",
+    "versions": [
+      "1.0"
+    ],
+    "relevant": [
+      "1.0/cache"
+    ],
+    "expected": [
+      "60 seconds"
+    ],
+    "kind": "typo"
+  },
+  {
+    "question": "I'm checking a file before I send it with Atlas 2.0. What's the largest upload it accepts?",
+    "versions": [
+      "2.0"
+    ],
+    "relevant": [
+      "2.0/upload"
+    ],
+    "expected": [
+      "32 MiB per file"
+    ],
+    "kind": "supported"
+  },
+  {
+    "question": "On a stock 1.0 install, do payloads get compressed?",
+    "versions": [
+      "1.0"
+    ],
+    "relevant": [
+      "1.0/compression"
+    ],
+    "expected": [
+      "disabled by default"
+    ],
+    "kind": "paraphrase"
+  },
+  {
+    "question": "Which output encodings does the 2.0 formats list contain?",
+    "versions": [
+      "2.0"
+    ],
+    "relevant": [
+      "2.0/formats"
+    ],
+    "expected": [
+      "JSON, CSV, and NDJSON"
+    ],
+    "kind": "supported"
+  },
+  {
+    "question": "My 2.0 worker is done with its client. What's the exact line for closing it?",
+    "versions": [
+      "2.0"
+    ],
+    "relevant": [
+      "2.0/close"
+    ],
+    "expected": [
+      "await client.aclose()"
+    ],
+    "kind": "paraphrase"
+  },
+  {
+    "question": "If the server tells the 1.0 client to go to a different URL, will it follow that redirect?",
+    "versions": [
+      "1.0"
+    ],
+    "relevant": [
+      "1.0/redirects"
+    ],
+    "expected": [
+      "does not follow redirects"
+    ],
+    "kind": "supported"
+  },
+  {
+    "question": "How many recrods fit in a batch on 1.0?",
+    "versions": [
+      "1.0"
+    ],
+    "relevant": [
+      "1.0/batch"
+    ],
+    "expected": [
+      "20 records"
+    ],
+    "kind": "typo"
+  },
+  {
+    "question": "At what logging level does Atlas 2.0 start out?",
+    "versions": [
+      "2.0"
+    ],
+    "relevant": [
+      "2.0/logging"
+    ],
+    "expected": [
+      "INFO"
+    ],
+    "kind": "supported"
+  },
+  {
+    "question": "We use both Atlas 1.0 and 2.0. What startup call should I put in the example for each version?",
+    "versions": [
+      "1.0",
+      "2.0"
+    ],
+    "relevant": [
+      "1.0/connect",
+      "2.0/connect"
+    ],
+    "expected": [
+      "Atlas.connect(url)",
+      "Client.open(endpoint=url)"
+    ],
+    "kind": "comparison"
+  },
+  {
+    "question": "What's the maximum per-file upload in Atlas 1.0 versus 2.0?",
+    "versions": [
+      "1.0",
+      "2.0"
+    ],
+    "relevant": [
+      "1.0/upload",
+      "2.0/upload"
+    ],
+    "expected": [
+      "8 MiB per file",
+      "32 MiB per file"
+    ],
+    "kind": "comparison"
+  },
+  {
+    "question": "How does out-of-the-box payload compression differ between 1.0 and 2.0?",
+    "versions": [
+      "1.0",
+      "2.0"
+    ],
+    "relevant": [
+      "1.0/compression",
+      "2.0/compression"
+    ],
+    "expected": [
+      "disabled by default",
+      "gzip by default"
+    ],
+    "kind": "comparison"
+  },
+  {
+    "question": "In Atlas 1.0, what determines when an interrupted transfer stops being resumable, and what is that lifetime in seconds?",
+    "versions": [
+      "1.0"
+    ],
+    "relevant": [
+      "1.0/resume window",
+      "1.0/cache"
+    ],
+    "expected": [
+      "until its cached entry expires",
+      "60 seconds"
+    ],
+    "kind": "cross_reference"
+  },
+  {
+    "question": "For Atlas 2.0, which expiry governs resuming a broken transfer, and how long does the cached entry live?",
+    "versions": [
+      "2.0"
+    ],
+    "relevant": [
+      "2.0/resume window",
+      "2.0/cache"
+    ],
+    "expected": [
+      "until its cached entry expires",
+      "300 seconds"
+    ],
+    "kind": "cross_reference"
+  },
+  {
+    "question": "Which TLS versions can the Atlas 2.0 client negotiate?",
+    "versions": [
+      "2.0"
+    ],
+    "relevant": [],
+    "expected": [],
+    "kind": "unsupported"
+  },
+  {
+    "question": "Where does Atlas 1.0 write its log file?",
+    "versions": [
+      "1.0"
+    ],
+    "relevant": [],
+    "expected": [],
+    "kind": "near_miss"
+  },
+  {
+    "question": "How many seconds does 2.0 sleep between retries?",
+    "versions": [
+      "2.0"
+    ],
+    "relevant": [],
+    "expected": [],
+    "kind": "near_miss"
+  },
+  {
+    "question": "What is the combined size limit for all files uploaded in a day on 1.0?",
+    "versions": [
+      "1.0"
+    ],
+    "relevant": [],
+    "expected": [],
+    "kind": "near_miss"
+  },
+  {
+    "question": "Which HTTP redirect status codes does Atlas 2.0 recognize?",
+    "versions": [
+      "2.0"
+    ],
+    "relevant": [],
+    "expected": [],
+    "kind": "near_miss"
+  },
+  {
+    "question": "What flag sets the gzip compression level in 2.0?",
+    "versions": [
+      "2.0"
+    ],
+    "relevant": [],
+    "expected": [],
+    "kind": "near_miss"
+  },
+  {
+    "question": "Did the default TCP port change between Atlas 1.0 and 2.0?",
+    "versions": [
+      "1.0",
+      "2.0"
+    ],
+    "relevant": [],
+    "expected": [],
+    "kind": "unsupported"
+  }
+]

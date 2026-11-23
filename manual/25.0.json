@@ -1,0 +1,77 @@
+{
+  "source": "packaging-version-reference",
+  "version": "25.0",
+  "date": "2026-11-23",
+  "sections": [
+    {
+      "title": "base_version",
+      "aliases": "base version",
+      "text": "The \"base version\" of the version.\n\n>>> Version(\"1.2.3\").base_version\n'1.2.3'\n>>> Version(\"1.2.3+abc\").base_version\n'1.2.3'\n>>> Version(\"1!1.2.3dev1+abc\").base_version\n'1!1.2.3'\n\nThe \"base version\" is the public version of the project without any pre or post\nrelease markers."
+    },
+    {
+      "title": "dev",
+      "aliases": "dev",
+      "text": "The development number of the version.\n\n>>> print(Version(\"1.2.3\").dev)\nNone\n>>> Version(\"1.2.3.dev1\").dev\n1"
+    },
+    {
+      "title": "epoch",
+      "aliases": "epoch",
+      "text": "The epoch of the version.\n\n>>> Version(\"2.0.0\").epoch\n0\n>>> Version(\"1!2.0.0\").epoch\n1"
+    },
+    {
+      "title": "is_devrelease",
+      "aliases": "is devrelease",
+      "text": "Whether this version is a development release.\n\n>>> Version(\"1.2.3\").is_devrelease\nFalse\n>>> Version(\"1.2.3.dev1\").is_devrelease\nTrue"
+    },
+    {
+      "title": "is_postrelease",
+      "aliases": "is postrelease",
+      "text": "Whether this version is a post-release.\n\n>>> Version(\"1.2.3\").is_postrelease\nFalse\n>>> Version(\"1.2.3.post1\").is_postrelease\nTrue"
+    },
+    {
+      "title": "is_prerelease",
+      "aliases": "is prerelease",
+      "text": "Whether this version is a pre-release.\n\n>>> Version(\"1.2.3\").is_prerelease\nFalse\n>>> Version(\"1.2.3a1\").is_prerelease\nTrue\n>>> Version(\"1.2.3b1\").is_prerelease\nTrue\n>>> Version(\"1.2.3rc1\").is_prerelease\nTrue\n>>> Version(\"1.2.3dev1\").is_prerelease\nTrue"
+    },
+    {
+      "title": "local",
+      "aliases": "local",
+      "text": "The local version segment of the version.\n\n>>> print(Version(\"1.2.3\").local)\nNone\n>>> Version(\"1.2.3+abc\").local\n'abc'"
+    },
+    {
+      "title": "major",
+      "aliases": "major",
+      "text": "The first item of :attr:`release` or ``0`` if unavailable.\n\n>>> Version(\"1.2.3\").major\n1"
+    },
+    {
+      "title": "micro",
+      "aliases": "micro",
+      "text": "The third item of :attr:`release` or ``0`` if unavailable.\n\n>>> Version(\"1.2.3\").micro\n3\n>>> Version(\"1\").micro\n0"
+    },
+    {
+      "title": "minor",
+      "aliases": "minor",
+      "text": "The second item of :attr:`release` or ``0`` if unavailable.\n\n>>> Version(\"1.2.3\").minor\n2\n>>> Version(\"1\").minor\n0"
+    },
+    {
+      "title": "post",
+      "aliases": "post",
+      "text": "The post-release number of the version.\n\n>>> print(Version(\"1.2.3\").post)\nNone\n>>> Version(\"1.2.3.post1\").post\n1"
+    },
+    {
+      "title": "pre",
+      "aliases": "pre",
+      "text": "The pre-release segment of the version.\n\n>>> print(Version(\"1.2.3\").pre)\nNone\n>>> Version(\"1.2.3a1\").pre\n('a', 1)\n>>> Version(\"1.2.3b1\").pre\n('b', 1)\n>>> Version(\"1.2.3rc1\").pre\n('rc', 1)"
+    },
+    {
+      "title": "public",
+      "aliases": "public",
+      "text": "The public portion of the version.\n\n>>> Version(\"1.2.3\").public\n'1.2.3'\n>>> Version(\"1.2.3+abc\").public\n'1.2.3'\n>>> Version(\"1!1.2.3dev1+abc\").public\n'1!1.2.3.dev1'"
+    },
+    {
+      "title": "release",
+      "aliases": "release",
+      "text": "The components of the \"release\" segment of the version.\n\n>>> Version(\"1.2.3\").release\n(1, 2, 3)\n>>> Version(\"2.0.0\").release\n(2, 0, 0)\n>>> Version(\"1!2.0.0.post0\").release\n(2, 0, 0)\n\nIncludes trailing zeroes but not the epoch or any pre-release / development /\npost-release suffixes."
+    }
+  ]
+}

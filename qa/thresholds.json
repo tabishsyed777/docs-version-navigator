@@ -1,0 +1,5 @@
+{
+  "minimum": {"recall_at_5":0.8,"precision_at_5":0.15,"mrr":0.8,"ndcg_at_5":0.8,"faithfulness":0.85,"answer_relevance":0.85,"context_relevance":0.18,"answer_correctness":0.85,"citation_accuracy":0.95,"refusal_correctness":0.95},
+  "maximum": {"hallucination_rate":0.05,"scale_accuracy_drop":0.05,"scale_p95_ms":1500,"load_p95_ms":3000},
+  "notes":"Deterministic extractive-answer proxies. Retrieval averages over answerable cases only. Precision denominator is always 5. Context relevance denominator is actual top-5 hits. Human review required separately."
+}

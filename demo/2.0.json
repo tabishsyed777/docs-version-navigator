@@ -1,0 +1,73 @@
+{
+  "source": "atlas-sdk-guide",
+  "version": "2.0",
+  "date": "2026-01-10",
+  "sections": [
+    {
+      "title": "timeout",
+      "aliases": "request timeout deadline waiting limit कितनी देर انتظار",
+      "text": "Requests time out after 30 seconds."
+    },
+    {
+      "title": "retries",
+      "aliases": "retry retries attempts repeat failure failed maximum कोशिश",
+      "text": "A failed request gets 4 retries."
+    },
+    {
+      "title": "connect",
+      "aliases": "connect connection client initialize initialization constructor create syntax",
+      "text": "Initialize the client with `Client.open(endpoint=url)`."
+    },
+    {
+      "title": "pagination",
+      "aliases": "pagination page size items results per limit",
+      "text": "Each page contains up to 100 items."
+    },
+    {
+      "title": "cache",
+      "aliases": "cache caching cached ttl lifetime duration expiry",
+      "text": "Cached entries expire after 300 seconds."
+    },
+    {
+      "title": "upload",
+      "aliases": "upload uploads attachment maximum size limit file bytes",
+      "text": "The upload limit is 32 MiB per file."
+    },
+    {
+      "title": "compression",
+      "aliases": "compression compressed gzip compress payload behavior",
+      "text": "Payload compression uses gzip by default."
+    },
+    {
+      "title": "formats",
+      "aliases": "formats format serialization supported output available",
+      "text": "Supported output formats are JSON, CSV, and NDJSON."
+    },
+    {
+      "title": "close",
+      "aliases": "close shutdown cleanup release resources exact wording instruction",
+      "text": "Close the client with `await client.aclose()`."
+    },
+    {
+      "title": "redirects",
+      "aliases": "redirects redirect follow automatically behavior",
+      "text": "The client follows at most 3 redirects."
+    },
+    {
+      "title": "batch",
+      "aliases": "batch batching records maximum count",
+      "text": "A batch accepts at most 50 records."
+    },
+    {
+      "title": "logging",
+      "aliases": "logging log verbosity level diagnostics",
+      "text": "The default log level is INFO."
+    },
+    {
+      "title": "resume window",
+      "aliases": "resumable transfer retention window resume expiry",
+      "text": "An interrupted transfer can resume until its cached entry expires.",
+      "see": "cache"
+    }
+  ]
+}

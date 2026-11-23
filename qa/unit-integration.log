@@ -1,0 +1,48 @@
+test_chunks (test_contract.TextContract.test_chunks) ... ok
+test_clean (test_contract.TextContract.test_clean) ... ok
+test_terms (test_contract.TextContract.test_terms) ... ok
+test_cli (test_pipeline.Integration.test_cli) ... ok
+test_duplicates_conflicts (test_pipeline.Integration.test_duplicates_conflicts) ... ok
+test_fail_closed_inputs (test_pipeline.Integration.test_fail_closed_inputs) ... ok
+test_filesystem_boundary (test_pipeline.Integration.test_filesystem_boundary) ... ok
+test_parallel_read_write (test_pipeline.Integration.test_parallel_read_write) ... ok
+test_source_chain (test_pipeline.Integration.test_source_chain) ... ok
+test_store_recovery (test_pipeline.Integration.test_store_recovery) ... ok
+test_transaction_rollback (test_pipeline.Integration.test_transaction_rollback) ... ok
+test_update_stale_delete (test_pipeline.Integration.test_update_stale_delete) ... ok
+test_ambiguous_limit (test_pipeline.ReleaseChecks.test_ambiguous_limit) ... ok
+test_ambiguous_multiple_terms (test_pipeline.ReleaseChecks.test_ambiguous_multiple_terms) ... ok
+test_boilerplate_and_bounded_output (test_pipeline.ReleaseChecks.test_boilerplate_and_bounded_output) ... ok
+test_cli_in_process (test_pipeline.ReleaseChecks.test_cli_in_process) ... ok
+test_cli_large_unicode (test_pipeline.ReleaseChecks.test_cli_large_unicode) ... ok
+test_db_metadata_sync (test_pipeline.ReleaseChecks.test_db_metadata_sync) ... ok
+test_distinctive_context_positions (test_pipeline.ReleaseChecks.test_distinctive_context_positions) ... ok
+test_empty_word_specialties (test_pipeline.ReleaseChecks.test_empty_word_specialties) ... ok
+test_fresh_snapshot_empty (test_pipeline.ReleaseChecks.test_fresh_snapshot_empty) ... ok
+test_index_lock_timeout_recovery (test_pipeline.ReleaseChecks.test_index_lock_timeout_recovery) ... ok
+test_missing_directory_and_bad_reference (test_pipeline.ReleaseChecks.test_missing_directory_and_bad_reference) ... ok
+test_multichunk_order (test_pipeline.ReleaseChecks.test_multichunk_order) ... ok
+test_no_cross_question_state (test_pipeline.ReleaseChecks.test_no_cross_question_state) ... ok
+test_no_term_cross_version (test_pipeline.ReleaseChecks.test_no_term_cross_version) ... ok
+test_position_paraphrase_and_languages (test_pipeline.ReleaseChecks.test_position_paraphrase_and_languages) ... ok
+test_private_examples (test_pipeline.ReleaseChecks.test_private_examples) ... ok
+test_rank_exact_title_over_extension (test_pipeline.ReleaseChecks.test_rank_exact_title_over_extension) ... ok
+test_related_and_missing (test_pipeline.ReleaseChecks.test_related_and_missing) ... ok
+test_slang_and_echo (test_pipeline.ReleaseChecks.test_slang_and_echo) ... ok
+test_stable_tie_and_diverse_ids (test_pipeline.ReleaseChecks.test_stable_tie_and_diverse_ids) ... ok
+test_unsupported_corpus_member (test_pipeline.ReleaseChecks.test_unsupported_corpus_member) ... ok
+test_bad_files (test_pipeline.Unit.test_bad_files) ... ok
+test_chunk_boundaries (test_pipeline.Unit.test_chunk_boundaries) ... ok
+test_hybrid_formula (test_pipeline.Unit.test_hybrid_formula) ... ok
+test_metadata (test_pipeline.Unit.test_metadata) ... ok
+test_rank_bounds_order (test_pipeline.Unit.test_rank_bounds_order) ... ok
+test_sensitive_and_injected_documents (test_pipeline.Unit.test_sensitive_and_injected_documents) ... ok
+test_unicode_structure (test_pipeline.Unit.test_unicode_structure) ... ok
+test_vector_contract (test_pipeline.Unit.test_vector_contract) ... ok
+test_cli_scope (test_version_scope.VersionScope.test_cli_scope) ... ok
+test_same_symbol_and_near_negatives (test_version_scope.VersionScope.test_same_symbol_and_near_negatives) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 1.437s
+
+OK

@@ -1,0 +1,551 @@
+[
+  {
+    "question": "What is the first item of release?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "first item"
+    ],
+    "relevant": [
+      "25.0/major"
+    ],
+    "actual": "[25.0 · packaging-version-reference · major] The first item of :attr:`release` or ``0`` if unavailable.\n\n>>> Version(\"1.2.3\").major\n1",
+    "status": "answered",
+    "citations": [
+      {
+        "id": "37ce56e80d759fabff886a50",
+        "source": "packaging-version-reference",
+        "version": "25.0",
+        "title": "major",
+        "published": "2026-11-23",
+        "start": 0,
+        "end": 88,
+        "text": "The first item of :attr:`release` or ``0`` if unavailable.\n\n>>> Version(\"1.2.3\").major\n1"
+      }
+    ],
+    "retrieved": [
+      "25.0/major",
+      "25.0/micro",
+      "25.0/minor",
+      "25.0/release",
+      "25.0/is_devrelease"
+    ],
+    "correct": true
+  },
+  {
+    "question": "What does minor return if unavailable?",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "second item"
+    ],
+    "relevant": [
+      "26.3/minor"
+    ],
+    "actual": "I don't know.",
+    "status": "insufficient_evidence",
+    "citations": [],
+    "retrieved": [
+      "26.3/minor",
+      "26.3/major",
+      "26.3/micro",
+      "26.3/from_parts",
+      "26.3/public"
+    ],
+    "correct": false
+  },
+  {
+    "question": "Explain micro",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "third item"
+    ],
+    "relevant": [
+      "25.0/micro"
+    ],
+    "actual": "[25.0 · packaging-version-reference · micro] The third item of :attr:`release` or ``0`` if unavailable.\n\n>>> Version(\"1.2.3\").micro\n3\n>>> Version(\"1\").micro\n0",
+    "status": "answered",
+    "citations": [
+      {
+        "id": "1c32464b4ae3e8789a2be2da",
+        "source": "packaging-version-reference",
+        "version": "25.0",
+        "title": "micro",
+        "published": "2026-11-23",
+        "start": 0,
+        "end": 113,
+        "text": "The third item of :attr:`release` or ``0`` if unavailable.\n\n>>> Version(\"1.2.3\").micro\n3\n>>> Version(\"1\").micro\n0"
+      }
+    ],
+    "retrieved": [
+      "25.0/micro"
+    ],
+    "correct": true
+  },
+  {
+    "question": "Show the epoch example for Version(\"2.0.0\")",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      ".epoch\n0"
+    ],
+    "relevant": [
+      "26.3/epoch"
+    ],
+    "actual": "I don't know.",
+    "status": "insufficient_evidence",
+    "citations": [],
+    "retrieved": [
+      "26.3/epoch",
+      "26.3/release",
+      "26.3/from_parts",
+      "26.3/minor",
+      "26.3/micro"
+    ],
+    "correct": false
+  },
+  {
+    "question": "What is the local version segment?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "local version segment"
+    ],
+    "relevant": [
+      "25.0/local"
+    ],
+    "actual": "[25.0 · packaging-version-reference · local] The local version segment of the version.\n\n>>> print(Version(\"1.2.3\").local)\nNone\n>>> Version(\"1.2.3+abc\").local\n'abc'",
+    "status": "answered",
+    "citations": [
+      {
+        "id": "9fb1caa4576c650bdc7e4949",
+        "source": "packaging-version-reference",
+        "version": "25.0",
+        "title": "local",
+        "published": "2026-11-23",
+        "start": 0,
+        "end": 118,
+        "text": "The local version segment of the version.\n\n>>> print(Version(\"1.2.3\").local)\nNone\n>>> Version(\"1.2.3+abc\").local\n'abc'"
+      }
+    ],
+    "retrieved": [
+      "25.0/local",
+      "25.0/pre",
+      "25.0/release",
+      "25.0/base_version",
+      "25.0/is_prerelease"
+    ],
+    "correct": true
+  },
+  {
+    "question": "Which release keyword argument is required for from_parts?",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "keyword argument is required"
+    ],
+    "relevant": [
+      "26.3/from_parts"
+    ],
+    "actual": "[26.3 · packaging-version-reference · from_parts] Return a new version composed of the various parts.\n\nThis allows you to build a version without going though a string and\nrunning a regular expression. It normalizes pre-release strings. The\n``release=`` keyword argument is required.\n\n>>> Version.from_parts(release=(1,2,3))\n<Version('1.2.3')>\n>>> Version.from_parts(release=(0,1,0), pre=(\"b\", 1))\n<Version('0.1.0b1')>\n\n:param epoch:\n:param release: This version tuple is required\n\n.. versionadded:: 26.1",
+    "status": "answered",
+    "citations": [
+      {
+        "id": "f479f52334081512a4e51a99",
+        "source": "packaging-version-reference",
+        "version": "26.3",
+        "title": "from_parts",
+        "published": "2026-11-23",
+        "start": 0,
+        "end": 454,
+        "text": "Return a new version composed of the various parts.\n\nThis allows you to build a version without going though a string and\nrunning a regular expression. It normalizes pre-release strings. The\n``release=`` keyword argument is required.\n\n>>> Version.from_parts(release=(1,2,3))\n<Version('1.2.3')>\n>>> Version.from_parts(release=(0,1,0), pre=(\"b\", 1))\n<Version('0.1.0b1')>\n\n:param epoch:\n:param release: This version tuple is required\n\n.. versionadded:: 26.1"
+      }
+    ],
+    "retrieved": [
+      "26.3/from_parts",
+      "26.3/release",
+      "26.3/major",
+      "26.3/is_postrelease",
+      "26.3/is_devrelease"
+    ],
+    "correct": true
+  },
+  {
+    "question": "Show Version.from_parts syntax",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [],
+    "relevant": [],
+    "actual": "I don't know.",
+    "status": "insufficient_evidence",
+    "citations": [],
+    "retrieved": [
+      "25.0/base_version",
+      "25.0/local",
+      "25.0/is_prerelease",
+      "25.0/is_devrelease",
+      "25.0/is_postrelease"
+    ],
+    "correct": true
+  },
+  {
+    "question": "What does public return?",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "public portion"
+    ],
+    "relevant": [
+      "26.3/public"
+    ],
+    "actual": "I don't know.",
+    "status": "insufficient_evidence",
+    "citations": [],
+    "retrieved": [
+      "26.3/public",
+      "26.3/from_parts",
+      "26.3/base_version"
+    ],
+    "correct": false
+  },
+  {
+    "question": "What is the development number?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "development number"
+    ],
+    "relevant": [
+      "25.0/dev"
+    ],
+    "actual": "[25.0 · packaging-version-reference · dev] The development number of the version.\n\n>>> print(Version(\"1.2.3\").dev)\nNone\n>>> Version(\"1.2.3.dev1\").dev\n1",
+    "status": "answered",
+    "citations": [
+      {
+        "id": "3d6cde51e82e129166d3fe0f",
+        "source": "packaging-version-reference",
+        "version": "25.0",
+        "title": "dev",
+        "published": "2026-11-23",
+        "start": 0,
+        "end": 108,
+        "text": "The development number of the version.\n\n>>> print(Version(\"1.2.3\").dev)\nNone\n>>> Version(\"1.2.3.dev1\").dev\n1"
+      }
+    ],
+    "retrieved": [
+      "25.0/dev",
+      "25.0/post",
+      "25.0/is_devrelease",
+      "25.0/release"
+    ],
+    "correct": true
+  },
+  {
+    "question": "Show post-release number",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "post-release number"
+    ],
+    "relevant": [
+      "26.3/post"
+    ],
+    "actual": "[26.3 · packaging-version-reference · post] The post-release number of the version.\n\n>>> print(Version(\"1.2.3\").post)\nNone\n>>> Version(\"1.2.3.post1\").post\n1",
+    "status": "answered",
+    "citations": [
+      {
+        "id": "d864ab398515c064d4f8bbfd",
+        "source": "packaging-version-reference",
+        "version": "26.3",
+        "title": "post",
+        "published": "2026-11-23",
+        "start": 0,
+        "end": 112,
+        "text": "The post-release number of the version.\n\n>>> print(Version(\"1.2.3\").post)\nNone\n>>> Version(\"1.2.3.post1\").post\n1"
+      }
+    ],
+    "retrieved": [
+      "26.3/post",
+      "26.3/release",
+      "26.3/is_postrelease",
+      "26.3/dev",
+      "26.3/base_version"
+    ],
+    "correct": true
+  },
+  {
+    "question": "Is a dev release considered a prerelease?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      ".is_prerelease\nTrue"
+    ],
+    "relevant": [
+      "25.0/is_prerelease"
+    ],
+    "actual": "I don't know.",
+    "status": "insufficient_evidence",
+    "citations": [],
+    "retrieved": [
+      "25.0/is_prerelease",
+      "25.0/dev",
+      "25.0/release",
+      "25.0/major",
+      "25.0/micro"
+    ],
+    "correct": false
+  },
+  {
+    "question": "How does base_version handle pre and post markers?",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "without any pre or post"
+    ],
+    "relevant": [
+      "26.3/base_version"
+    ],
+    "actual": "I don't know.",
+    "status": "insufficient_evidence",
+    "citations": [],
+    "retrieved": [
+      "26.3/base_version",
+      "26.3/post",
+      "26.3/pre",
+      "26.3/from_parts",
+      "26.3/is_postrelease"
+    ],
+    "correct": false
+  },
+  {
+    "question": "What are the release components?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "components"
+    ],
+    "relevant": [
+      "25.0/release"
+    ],
+    "actual": "[25.0 · packaging-version-reference · release] The components of the \"release\" segment of the version.\n\n>>> Version(\"1.2.3\").release\n(1, 2, 3)\n>>> Version(\"2.0.0\").release\n(2, 0, 0)\n>>> Version(\"1!2.0.0.post0\").release\n(2, 0, 0)\n\nIncludes trailing zeroes but not the epoch or any pre-release / development /\npost-release suffixes.",
+    "status": "answered",
+    "citations": [
+      {
+        "id": "48fee86fc8dc0c827e15aedd",
+        "source": "packaging-version-reference",
+        "version": "25.0",
+        "title": "release",
+        "published": "2026-11-23",
+        "start": 0,
+        "end": 283,
+        "text": "The components of the \"release\" segment of the version.\n\n>>> Version(\"1.2.3\").release\n(1, 2, 3)\n>>> Version(\"2.0.0\").release\n(2, 0, 0)\n>>> Version(\"1!2.0.0.post0\").release\n(2, 0, 0)\n\nIncludes trailing zeroes but not the epoch or any pre-release / development /\npost-release suffixes."
+      }
+    ],
+    "retrieved": [
+      "25.0/release",
+      "25.0/major",
+      "25.0/micro",
+      "25.0/minor",
+      "25.0/is_devrelease"
+    ],
+    "correct": true
+  },
+  {
+    "question": "Show is_devrelease for 1.2.3.dev1",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      ".is_devrelease\nTrue"
+    ],
+    "relevant": [
+      "26.3/is_devrelease"
+    ],
+    "actual": "Navigator error (ValueError): version conflict between the question and --version",
+    "status": "cli_error",
+    "citations": [],
+    "retrieved": [],
+    "correct": false
+  },
+  {
+    "question": "Explain the pre-release segment",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "pre-release segment"
+    ],
+    "relevant": [
+      "25.0/pre"
+    ],
+    "actual": "[25.0 · packaging-version-reference · pre] The pre-release segment of the version.\n\n>>> print(Version(\"1.2.3\").pre)\nNone\n>>> Version(\"1.2.3a1\").pre\n('a', 1)\n>>> Version(\"1.2.3b1\").pre\n('b', 1)\n>>> Version(\"1.2.3rc1\").pre\n('rc', 1)",
+    "status": "answered",
+    "citations": [
+      {
+        "id": "d76f74da33453d6b0d2aaa39",
+        "source": "packaging-version-reference",
+        "version": "25.0",
+        "title": "pre",
+        "published": "2026-11-23",
+        "start": 0,
+        "end": 187,
+        "text": "The pre-release segment of the version.\n\n>>> print(Version(\"1.2.3\").pre)\nNone\n>>> Version(\"1.2.3a1\").pre\n('a', 1)\n>>> Version(\"1.2.3b1\").pre\n('b', 1)\n>>> Version(\"1.2.3rc1\").pre\n('rc', 1)"
+      }
+    ],
+    "retrieved": [
+      "25.0/pre",
+      "25.0/release",
+      "25.0/local",
+      "25.0/is_prerelease",
+      "25.0/base_version"
+    ],
+    "correct": true
+  },
+  {
+    "question": "Explain is_postrelease",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "post-release"
+    ],
+    "relevant": [
+      "26.3/is_postrelease"
+    ],
+    "actual": "[26.3 · packaging-version-reference · is_postrelease] Whether this version is a post-release.\n\n>>> Version(\"1.2.3\").is_postrelease\nFalse\n>>> Version(\"1.2.3.post1\").is_postrelease\nTrue",
+    "status": "answered",
+    "citations": [
+      {
+        "id": "baa8ebc9aaa221a506161f0f",
+        "source": "packaging-version-reference",
+        "version": "26.3",
+        "title": "is_postrelease",
+        "published": "2026-11-23",
+        "start": 0,
+        "end": 129,
+        "text": "Whether this version is a post-release.\n\n>>> Version(\"1.2.3\").is_postrelease\nFalse\n>>> Version(\"1.2.3.post1\").is_postrelease\nTrue"
+      }
+    ],
+    "retrieved": [
+      "26.3/is_postrelease"
+    ],
+    "correct": true
+  },
+  {
+    "question": "Which keyword does from_parts require?",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [],
+    "relevant": [],
+    "actual": "I don't know.",
+    "status": "insufficient_evidence",
+    "citations": [],
+    "retrieved": [],
+    "correct": true
+  },
+  {
+    "question": "Can I build a version without running a regular expression?",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "without going though a string"
+    ],
+    "relevant": [
+      "26.3/from_parts"
+    ],
+    "actual": "[26.3 · packaging-version-reference · from_parts] Return a new version composed of the various parts.\n\nThis allows you to build a version without going though a string and\nrunning a regular expression. It normalizes pre-release strings. The\n``release=`` keyword argument is required.\n\n>>> Version.from_parts(release=(1,2,3))\n<Version('1.2.3')>\n>>> Version.from_parts(release=(0,1,0), pre=(\"b\", 1))\n<Version('0.1.0b1')>\n\n:param epoch:\n:param release: This version tuple is required\n\n.. versionadded:: 26.1",
+    "status": "answered",
+    "citations": [
+      {
+        "id": "f479f52334081512a4e51a99",
+        "source": "packaging-version-reference",
+        "version": "26.3",
+        "title": "from_parts",
+        "published": "2026-11-23",
+        "start": 0,
+        "end": 454,
+        "text": "Return a new version composed of the various parts.\n\nThis allows you to build a version without going though a string and\nrunning a regular expression. It normalizes pre-release strings. The\n``release=`` keyword argument is required.\n\n>>> Version.from_parts(release=(1,2,3))\n<Version('1.2.3')>\n>>> Version.from_parts(release=(0,1,0), pre=(\"b\", 1))\n<Version('0.1.0b1')>\n\n:param epoch:\n:param release: This version tuple is required\n\n.. versionadded:: 26.1"
+      }
+    ],
+    "retrieved": [
+      "26.3/from_parts",
+      "26.3/base_version",
+      "26.3/local",
+      "26.3/is_prerelease",
+      "26.3/is_postrelease"
+    ],
+    "correct": true
+  },
+  {
+    "question": "Show the public property performance advice for __replace__",
+    "versions": [
+      "25.0"
+    ],
+    "kind": "real API reference",
+    "expected": [],
+    "relevant": [],
+    "actual": "I don't know.",
+    "status": "insufficient_evidence",
+    "citations": [],
+    "retrieved": [
+      "25.0/public",
+      "25.0/base_version"
+    ],
+    "correct": true
+  },
+  {
+    "question": "Show the public portion performance advice",
+    "versions": [
+      "26.3"
+    ],
+    "kind": "real API reference",
+    "expected": [
+      "__replace__(local=None)"
+    ],
+    "relevant": [
+      "26.3/public"
+    ],
+    "actual": "I don't know.",
+    "status": "insufficient_evidence",
+    "citations": [],
+    "retrieved": [
+      "26.3/public",
+      "26.3/base_version"
+    ],
+    "correct": false
+  }
+]

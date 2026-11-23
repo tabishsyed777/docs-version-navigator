@@ -1,0 +1,156 @@
+{
+  "source_sha256": "5f216ce105819bb4a79ea7fafc652ee60d0cb81992ecb333c24c9b6734127be0",
+  "control": {
+    "name": "control",
+    "old": "",
+    "new": "",
+    "exit": 0,
+    "status": "clean",
+    "detected_by": []
+  },
+  "mutants": [
+    {
+      "name": "ignore-version-conflict",
+      "old": "if value not in versions:",
+      "new": "if False:",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_cli_scope (test_version_scope.VersionScope.test_cli_scope)"
+      ]
+    },
+    {
+      "name": "remove-version-filter",
+      "old": "WHERE version=? ORDER BY id",
+      "new": "WHERE version=? OR 1 ORDER BY id",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_cli (test_pipeline.Integration.test_cli)",
+        "test_source_chain (test_pipeline.Integration.test_source_chain)",
+        "test_cli_large_unicode (test_pipeline.ReleaseChecks.test_cli_large_unicode)",
+        "test_slang_and_echo (test_pipeline.ReleaseChecks.test_slang_and_echo)",
+        "test_cli_scope (test_version_scope.VersionScope.test_cli_scope)",
+        "test_duplicates_conflicts (test_pipeline.Integration.test_duplicates_conflicts)",
+        "test_filesystem_boundary (test_pipeline.Integration.test_filesystem_boundary)",
+        "test_parallel_read_write (test_pipeline.Integration.test_parallel_read_write)",
+        "test_store_recovery (test_pipeline.Integration.test_store_recovery)",
+        "test_update_stale_delete (test_pipeline.Integration.test_update_stale_delete)",
+        "test_boilerplate_and_bounded_output (test_pipeline.ReleaseChecks.test_boilerplate_and_bounded_output)",
+        "test_db_metadata_sync (test_pipeline.ReleaseChecks.test_db_metadata_sync)",
+        "test_index_lock_timeout_recovery (test_pipeline.ReleaseChecks.test_index_lock_timeout_recovery)",
+        "test_multichunk_order (test_pipeline.ReleaseChecks.test_multichunk_order)",
+        "test_no_term_cross_version (test_pipeline.ReleaseChecks.test_no_term_cross_version)",
+        "test_related_and_missing (test_pipeline.ReleaseChecks.test_related_and_missing)",
+        "test_same_symbol_and_near_negatives (test_version_scope.VersionScope.test_same_symbol_and_near_negatives)"
+      ]
+    },
+    {
+      "name": "invert-score-order",
+      "old": "(-h[0], h[1].id)",
+      "new": "(h[0], h[1].id)",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_rank_exact_title_over_extension (test_pipeline.ReleaseChecks.test_rank_exact_title_over_extension)"
+      ]
+    },
+    {
+      "name": "drop-stale-check",
+      "old": "if fingerprint(Path(rows[0][2])) != rows[0][3]:",
+      "new": "if False:",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_update_stale_delete (test_pipeline.Integration.test_update_stale_delete)"
+      ]
+    },
+    {
+      "name": "bypass-record-check",
+      "old": "if (records or expected) and expected != (record_digest(records),):",
+      "new": "if False:",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_db_metadata_sync (test_pipeline.ReleaseChecks.test_db_metadata_sync)"
+      ]
+    },
+    {
+      "name": "ignore-conflicts",
+      "old": "if len({p.source for p in same}) > 1 or len({p.start for p in same}) != len(same):",
+      "new": "if False:",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_duplicates_conflicts (test_pipeline.Integration.test_duplicates_conflicts)"
+      ]
+    },
+    {
+      "name": "disable-linked-evidence",
+      "old": "if chosen.see:",
+      "new": "if False:",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_related_and_missing (test_pipeline.ReleaseChecks.test_related_and_missing)"
+      ]
+    },
+    {
+      "name": "disable-secret-screen",
+      "old": "if SENSITIVE.search(\" \".join((title, body, aliases, doc[\"source\"]))):",
+      "new": "if False:",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_private_examples (test_pipeline.ReleaseChecks.test_private_examples) (body='Call +1 (202) 555-0123')",
+        "test_private_examples (test_pipeline.ReleaseChecks.test_private_examples) (body='Card 4111 1111 1111 1111')",
+        "test_sensitive_and_injected_documents (test_pipeline.Unit.test_sensitive_and_injected_documents) (text='Contact a@example.org')",
+        "test_sensitive_and_injected_documents (test_pipeline.Unit.test_sensitive_and_injected_documents) (text='password=abcdef')",
+        "test_sensitive_and_injected_documents (test_pipeline.Unit.test_sensitive_and_injected_documents) (text='/Users/demo/private')"
+      ]
+    },
+    {
+      "name": "remove-title-boost",
+      "old": "score += 1.0",
+      "new": "score += 0.0",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_rank_exact_title_over_extension (test_pipeline.ReleaseChecks.test_rank_exact_title_over_extension)",
+        "test_hybrid_formula (test_pipeline.Unit.test_hybrid_formula)"
+      ]
+    },
+    {
+      "name": "drop-last-character",
+      "old": "text[start:pos]))",
+      "new": "text[start:pos-1]))",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_chunks (test_contract.TextContract.test_chunks)",
+        "test_multichunk_order (test_pipeline.ReleaseChecks.test_multichunk_order)",
+        "test_chunk_boundaries (test_pipeline.Unit.test_chunk_boundaries)"
+      ]
+    },
+    {
+      "name": "wrong-metric",
+      "old": "0.3*cosine",
+      "new": "0.0*cosine",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_hybrid_formula (test_pipeline.Unit.test_hybrid_formula)"
+      ]
+    },
+    {
+      "name": "permit-negative-k",
+      "old": "if k < 0:",
+      "new": "if k < -1:",
+      "exit": 1,
+      "status": "killed",
+      "detected_by": [
+        "test_rank_bounds_order (test_pipeline.Unit.test_rank_bounds_order)"
+      ]
+    }
+  ]
+}

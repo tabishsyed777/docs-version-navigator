@@ -1,0 +1,1 @@
+{"accuracy_min":0.85,"recall_at_5_min":0.8,"wrong_version_max":0,"mutation_kill_fraction_min":1,"scale_cli_p95_ms_max":1500,"scale_accuracy_drop_max":0.05,"minimum_passages":2000}
