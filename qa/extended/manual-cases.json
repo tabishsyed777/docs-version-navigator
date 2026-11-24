@@ -106,10 +106,10 @@
     "citations": [],
     "retrieved": [
       "26.3/epoch",
-      "26.3/release",
       "26.3/from_parts",
-      "26.3/minor",
-      "26.3/micro"
+      "26.3/release",
+      "26.3/base_version",
+      "26.3/local"
     ],
     "correct": false
   },

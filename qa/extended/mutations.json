@@ -1,5 +1,5 @@
 {
-  "source_sha256": "5f216ce105819bb4a79ea7fafc652ee60d0cb81992ecb333c24c9b6734127be0",
+  "source_sha256": "6e69fb6cb3df655b686d7f379ab73d6ee30446c7780f47af7f5bba5cc49ecf2c",
   "control": {
     "name": "control",
     "old": "",
@@ -16,6 +16,7 @@
       "exit": 1,
       "status": "killed",
       "detected_by": [
+        "test_examples_do_not_override_scope (test_literals.ReleaseContext.test_examples_do_not_override_scope)",
         "test_cli_scope (test_version_scope.VersionScope.test_cli_scope)"
       ]
     },

@@ -223,6 +223,10 @@ def strip_scope(query, versions):
         if value not in versions:
             raise ValueError("version conflict between the question and --version")
         return " "
+    # Version-shaped literals in examples do not select a manual.
+    query=re.sub(r"""(`+)([\s\S]*?)\1|"[^"]*"|'[^']*'""",
+                 lambda m: " " if re.search(r"\d+\.\d+",m.group()) else m.group(),query)
+    query=re.sub(r"\b(?:example|e\.g\.|returns|equals)\s*[:=]?\s*(?:in\s+)?(?:(?:version|release)\s+|v)?\d+(?:\.\d+)+"," ",query,flags=re.I)
     return SCOPE.sub(remove, query)
 
 
@@ -238,6 +242,10 @@ def answer(query, versions, db, k=5):
     for version, passages in read_versions(db, versions).items():
         vocabulary = sorted({w for p in passages for w in search_terms(p.title+" "+p.aliases+" "+p.text)})
         for clause in re.split(r"\s+and\s+|\s*;\s*", query, flags=re.I):
+            clause=re.sub(r"\b(?:could you|would you|kindly|clarify|describe|according to the manual)\b"," ",clause,flags=re.I)
+            for phrase,target in [("extra tries","retries"),("give up waiting","timeout"),("largest upload","upload limit")]:
+                if all(w in vocabulary for w in search_terms(target)):
+                    clause=re.sub(r"\b"+phrase+r"\b",target,clause,flags=re.I)
             words = search_terms(clause)
             normalized = []
             for word in words:

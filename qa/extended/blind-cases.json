@@ -38,9 +38,9 @@
     "status": "insufficient_evidence",
     "citations": [],
     "retrieved": [
+      "2.0/retries",
       "2.0/timeout",
-      "2.0/cache",
-      "2.0/retries"
+      "2.0/cache"
     ],
     "correct": false
   },
@@ -125,7 +125,9 @@
     "citations": [],
     "retrieved": [
       "2.0/upload",
-      "2.0/batch"
+      "2.0/batch",
+      "2.0/pagination",
+      "2.0/timeout"
     ],
     "correct": false
   },

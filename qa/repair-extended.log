@@ -1,0 +1,85 @@
+{
+  "source_sha256": "6e69fb6cb3df655b686d7f379ab73d6ee30446c7780f47af7f5bba5cc49ecf2c",
+  "sets": {
+    "blind": {
+      "passages": 26,
+      "cases": 24,
+      "correct": 7,
+      "answerable": 17,
+      "abstained": 24,
+      "metrics": {
+        "answer_correctness": 0.2916666666666667,
+        "recall_at_5": 0.9705882352941176,
+        "precision_at_5": 0.24705882352941178,
+        "context_relevance": 0.4931372549019608,
+        "mrr": 0.9558823529411765,
+        "ndcg_at_5": 0.9390320317639435,
+        "answer_relevance": 0,
+        "refusal_correctness": 1
+      },
+      "cli_ms": {
+        "p50_ms": 36.70110000001614,
+        "p95_ms": 48.88014099998372
+      },
+      "wrong_version_cases": []
+    },
+    "manual": {
+      "passages": 29,
+      "cases": 20,
+      "correct": 13,
+      "answerable": 17,
+      "abstained": 10,
+      "metrics": {
+        "answer_correctness": 0.65,
+        "recall_at_5": 0.9411764705882353,
+        "precision_at_5": 0.18823529411764706,
+        "context_relevance": 0.3107843137254902,
+        "mrr": 0.9411764705882353,
+        "ndcg_at_5": 0.9411764705882353,
+        "answer_relevance": 0.5882352941176471,
+        "citation_accuracy": 1,
+        "faithfulness": 1,
+        "hallucination_rate": 0,
+        "refusal_correctness": 1
+      },
+      "cli_ms": {
+        "p50_ms": 34.85985000000369,
+        "p95_ms": 38.157979000004616
+      },
+      "wrong_version_cases": []
+    },
+    "scale": {
+      "passages": 2106,
+      "cases": 42,
+      "correct": 42,
+      "answerable": 36,
+      "abstained": 6,
+      "metrics": {
+        "answer_correctness": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.23333333333333334,
+        "context_relevance": 0.5398148148148149,
+        "mrr": 1.0,
+        "ndcg_at_5": 1.0,
+        "answer_relevance": 1,
+        "citation_accuracy": 1,
+        "faithfulness": 1,
+        "hallucination_rate": 0,
+        "refusal_correctness": 1
+      },
+      "cli_ms": {
+        "p50_ms": 55.64070849999325,
+        "p95_ms": 71.69915600002241
+      },
+      "wrong_version_cases": []
+    }
+  },
+  "failures": [
+    "High: blind answer_correctness",
+    "High: manual answer_correctness"
+  ],
+  "questions_sha256": {
+    "blind": "3d17e02cc69d442dc9f5cb18b84025c224e13835df90134f32a2415e165bc61a",
+    "manual": "b456b9e83809936815f5a5196e59bb13163fbe4333fd90faf47d4cafb4a9d4b0"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "source_sha256": "5f216ce105819bb4a79ea7fafc652ee60d0cb81992ecb333c24c9b6734127be0",
+  "source_sha256": "6e69fb6cb3df655b686d7f379ab73d6ee30446c7780f47af7f5bba5cc49ecf2c",
   "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
   "metrics": {
     "answer_correctness": 1,
@@ -14,8 +14,8 @@
     "hallucination_rate": 0,
     "refusal_correctness": 1,
     "scale_accuracy_drop": 0,
-    "scale_p95_ms": 67.34024499996849,
-    "load_p95_ms": 533.118641999863
+    "scale_p95_ms": 43.14087699998481,
+    "load_p95_ms": 447.6381380000021
   },
   "thresholds": {
     "minimum": {
@@ -42,25 +42,25 @@
   "correct": 42,
   "cases": 42,
   "cli_latency": {
-    "p50_ms": 48.46054899996943,
-    "p95_ms": 74.63037100001202
+    "p50_ms": 46.39280500001064,
+    "p95_ms": 60.46567000004188
   },
   "stages": {
     "rank": {
-      "p50_ms": 0.11559399990801467,
-      "p95_ms": 0.2012630000081117
+      "p50_ms": 0.07713499996953033,
+      "p95_ms": 0.2130070000134765
     },
     "snapshot_read_verify": {
-      "p50_ms": 0.36508649998268083,
-      "p95_ms": 0.4928040000322653
+      "p50_ms": 0.23624150000500777,
+      "p95_ms": 0.4372000000216758
     },
     "answer_assembly_and_routing": {
-      "p50_ms": 0.1673379998692326,
-      "p95_ms": 0.40913700013334164
+      "p50_ms": 0.1465424999764764,
+      "p95_ms": 0.4078670000353668
     },
     "total_in_process": {
-      "p50_ms": 0.6866305000130524,
-      "p95_ms": 1.0374160001447308
+      "p50_ms": 0.49710500002220215,
+      "p95_ms": 0.7928109999966182
     }
   },
   "scale": {
@@ -79,16 +79,16 @@
       "refusal_correctness": 1
     },
     "cli": {
-      "p50_ms": 52.32202050001433,
-      "p95_ms": 67.34024499996849
+      "p50_ms": 38.80982399999766,
+      "p95_ms": 43.14087699998481
     }
   },
   "load": {
     "workers": 50,
     "passed": 50,
-    "wall_seconds": 0.5543365270000322,
-    "cpu_seconds": 0.911501715,
-    "peak_process_rss_kib_linux": 36024
+    "wall_seconds": 0.45855056300001706,
+    "cpu_seconds": 0.738478946,
+    "peak_process_rss_kib_linux": 36156
   },
   "model_tokens_in": 0,
   "model_tokens_out": 0,
